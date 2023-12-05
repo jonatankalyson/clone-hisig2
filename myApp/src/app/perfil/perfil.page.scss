@@ -1,0 +1,85 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.content{
+  width: 320px;
+}
+
+.papelParede{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 516px;
+  width: 376px;
+}
+
+.inf-profile{
+  margin-top: 70px;
+  text-align: center;
+}
+
+.inf-profile div{
+  position: relative;
+}
+
+.input{
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  height: 51px;
+  width: 51px;
+  opacity: 0;
+}
+
+.inf-profile h3{
+  color: #000;
+  font-family: 'Inconsolata', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.inf-profile h4{
+  color: #474747;
+  font-family: 'Inconsolata', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 18px 0;
+}
+
+.options{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 19px 19px 19px;
+}
+
+.config{
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  
+}
+
+.config a{
+  text-decoration: none;
+  color: #000;
+  font-family: 'Inconsolata', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.6;
+}
+
+.button{
+  width: 165px;
+  margin: 74px auto 0;
+  background: #9791FB;
+  border-radius: 20px;
+}
+

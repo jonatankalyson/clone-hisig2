@@ -1,0 +1,83 @@
+<ion-content [fullscreen]="true">
+  <div class="content-container">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Lista de Horário</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <div>
+      <h1 class="title-h1">Lista de Horário</h1>
+    </div>
+
+    <ion-searchbar [(ngModel)]="termoDeBusca" (ionInput)="filtrarLista()"></ion-searchbar>
+
+    <ng-container *ngFor="let horario of horariosFiltrados">
+      <h2>{{ horario.nomecompleto }}</h2>
+      <table class="horario-table">
+        <thead>
+          <tr>
+            <th>Dia da Semana</th>
+            <th>Entrada</th>
+            <th>Intervalo</th>
+            <th>Saída</th>
+         
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Segunda-feira</td>
+            <td>{{ horario.entrada_Segunda }}</td>
+            <td>{{ horario.intervalo_Segunda }}</td>
+            <td>{{ horario.saida_Segunda }}</td>
+            
+          </tr>
+          <tr>
+            <td>Terça-feira</td>
+            <td>{{ horario.entrada_Terca }}</td>
+            <td>{{ horario.intervalo_Terca }}</td>
+            <td>{{ horario.saida_Terca }}</td>
+            
+          </tr>
+          <tr>
+            <td>Quarta-feira</td>
+            <td>{{ horario.entrada_Quarta }}</td>
+            <td>{{ horario.intervalo_Quarta }}</td>
+            <td>{{ horario.saida_Quarta }}</td>
+           
+          </tr>
+          <tr>
+            <td>Quinta-feira</td>
+            <td>{{ horario.entrada_Quinta }}</td>
+            <td>{{ horario.intervalo_Quinta }}</td>
+            <td>{{ horario.saida_Quinta }}</td>
+            
+          </tr>
+          <tr>
+            <td>Sexta-feira</td>
+            <td>{{ horario.entrada_Sexta }}</td>
+            <td>{{ horario.intervalo_Sexta }}</td>
+            <td>{{ horario.saida_Sexta }}</td>
+           
+          </tr>
+          <tr>
+            <td>Sábado</td>
+            <td>{{ horario.entrada_Sabado }}</td>
+            <td>{{ horario.intervalo_Sabado }}</td>
+            <td>{{ horario.saida_Sabado }}</td>
+          </tr>
+
+            <p>Observação: {{ horario.observacao }}</p>
+            <p>Turno: {{ horario.turno }}</p>
+            <p>Setor: {{ horario.setor }}</p>
+            <p>Empresa: {{ horario.empresa }}</p>
+            <p>Horário Semanal: {{ horario.horariototalsemanal }}</p>
+        </tbody>
+      </table>
+      <ion-button (click)="apagarHorario(horario.id)">
+        <ion-img src="../../assets/icon/Vector (2).png" alt="criar-task"></ion-img>
+      </ion-button>
+      <ion-button (click)="editarHorario(horario.id)">Editar</ion-button>
+    </ng-container>
+
+  </div>
+</ion-content>

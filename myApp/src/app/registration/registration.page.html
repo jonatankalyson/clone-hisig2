@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="content-container">
+    <div class="container">
+      <form [formGroup]="registrationForm" (ngSubmit)="submit()">
+        <h2>Cadastro</h2>
+        <ion-item lines="full">
+          <ion-label position="floating">Usuário</ion-label>
+          <ion-input type="text" formControlName="username" required></ion-input>
+        </ion-item>
+        <ion-item *ngIf="registrationForm.get('username')?.invalid && (registrationForm.get('username')?.dirty || registrationForm.get('username')?.touched)" lines="none">
+          <ion-text color="danger">
+            <p class="validação" *ngIf="registrationForm.get('username')?.hasError('required')">Campo obrigatório.</p>
+          </ion-text>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input type="text" formControlName="email" required></ion-input>
+        </ion-item>
+        <ion-item *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)" lines="none">
+          <ion-text color="danger">
+            <p class="validação" *ngIf="registrationForm.get('email')?.hasError('required')">Campo obrigatório.</p>
+            <p class="validação" *ngIf="registrationForm.get('email')?.hasError('email')">Email inválido.</p>
+          </ion-text>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" formControlName="password" required></ion-input>
+        </ion-item>
+        <ion-item *ngIf="registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)" lines="none">
+          <ion-text color="danger">
+            <p class="validação" *ngIf="registrationForm.get('password')?.hasError('required')">Campo obrigatório.</p>
+          </ion-text>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Confirmar senha</ion-label>
+          <ion-input type="password" formControlName="confirmPassword" required></ion-input>
+        </ion-item>
+        <ion-item *ngIf="registrationForm.get('confirmPassword')?.invalid && (registrationForm.get('confirmPassword')?.dirty || registrationForm.get('confirmPassword')?.touched)" lines="none">
+          <ion-text color="danger">
+            <p class="validação" *ngIf="registrationForm.get('confirmPassword')?.hasError('required')">As senhas não coincidem.</p>
+          </ion-text>
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <ion-button shape="round" color="tertiary" type="submit" expand="block">Cadastrar</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+  </div>
+</ion-content>

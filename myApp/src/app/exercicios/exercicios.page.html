@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true">
+  <div class="content-container">
+    <h1 class="title-h1">Exercícios</h1>
+    <ion-list>
+      <ion-item>
+        <ion-avatar slot="start" class="img-container">
+          <img src="../../assets/icon/exercicio1.png">
+        </ion-avatar>
+
+        <ion-checkbox></ion-checkbox>
+        <ion-label [routerLink]="['/exercicio-frontend']"><span>Front-End</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start" class="img-container">
+          <img src="../../assets/icon/exercicio2.png">
+        </ion-avatar>
+
+        <ion-checkbox></ion-checkbox>
+        <ion-label [routerLink]="['/tests-back-end']"><span>Back-End</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start" class="img-container">
+          <img src="../../assets/icon/exercicio3.png">
+        </ion-avatar>
+
+        <ion-checkbox></ion-checkbox>
+        <ion-label [routerLink]="['/tests-back-end']"><span>GitHub</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          </p>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+  </div>
+
+</ion-content>

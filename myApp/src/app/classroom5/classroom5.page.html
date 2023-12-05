@@ -1,0 +1,52 @@
+
+<ion-content [fullscreen]="true">
+
+  <div class="content-container">
+
+    <h1 class="title-h1">Front-End</h1>
+
+    <ion-list>
+      <a (click)="openhtmlcss()" >
+        <ion-item>
+          <ion-avatar slot="start" class="img-container">
+            <img src="../../assets/icon/aula1.png">
+          </ion-avatar>
+
+          <ion-checkbox [(ngModel)]="isCheckedAula1"></ion-checkbox>
+          <ion-label><span>Aula 1</span>
+            <p>Descubra a essência da gestão ágil, seu impacto atual, sua abrangência e o gestor do futuro</p>
+          </ion-label>
+
+        </ion-item>
+      </a>
+
+      <a (click)="openjs()">
+        <ion-item>
+          <ion-avatar slot="start" class="img-container">
+            <img src="../../assets/icon/aula2.png">
+          </ion-avatar>
+
+          <ion-checkbox [(ngModel)]="isCheckedAula2"></ion-checkbox>
+          <ion-label><span>Aula 2</span>
+            <p>Explore a aplicabilidade da gestão ágil em diversas áreas, o princípio do 80/20 e metodologias como Scrum, Kanban, OKR, Design Thinking, Lean e mais</p>
+          </ion-label>
+        </ion-item>
+      </a>
+
+      <a (click)="openionic()">
+        <ion-item>
+          <ion-avatar slot="start" class="img-container">
+            <img src="../../assets/icon/aula3.png">
+          </ion-avatar>
+
+          <ion-checkbox [(ngModel)]="isCheckedAula3"></ion-checkbox>
+          <ion-label><span>Aula 3</span>
+            <p>Como organizar seus projetos com gestão ágil e se tornar referência em gestão?</p>
+          </ion-label>
+        </ion-item>
+      </a>
+
+  </ion-list>
+  </div>
+
+</ion-content>

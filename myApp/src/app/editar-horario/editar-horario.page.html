@@ -1,0 +1,182 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Horário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="content-container">
+
+    <div class="container">
+      <h1 class="task-title">Editar Horário</h1>
+
+      <ion-label position="stacked">Nome:</ion-label>
+
+      <ion-item class="input-title">
+        <ion-input [(ngModel)]="nomecompleto" placeholder="Nome e Sobrenome"></ion-input>
+      </ion-item>
+
+      <h6>Horário do Compromisso</h6>
+
+      <!-- Segunda-feira -->
+      <ion-item class="input-title">
+        <label for="entrada_Segunda"> Entrada Segunda-feira
+          <input type="time" [(ngModel)]="entrada_Segunda" name="entrada_Segunda" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="intervalo_Segunda"> Intervalo Segunda-feira
+          <input type="time" [(ngModel)]="intervalo_Segunda" name="intervalo_Segunda" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="saida_Segunda"> Saída Segunda-feira
+          <input type="time" [(ngModel)]="saida_Segunda" name="saida_Segunda" id="time">
+        </label>
+      </ion-item>
+
+      <!-- Terça-feira -->
+      <ion-item class="input-title">
+        <label for="entrada_Terca"> Entrada Terça-feira
+          <input type="time" [(ngModel)]="entrada_Terca" name="entrada_Terca" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="intervalo_Terca"> Intervalo Terça-feira
+          <input type="time" [(ngModel)]="intervalo_Terca" name="intervalo_Terca" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="saida_Terca"> Saída Terça-feira
+          <input type="time" [(ngModel)]="saida_Terca" name="saida_Terca" id="time">
+        </label>
+      </ion-item>
+
+      <!-- Quarta-feira -->
+      <ion-item class="input-title">
+        <label for="entrada_Quarta"> Entrada Quarta-feira
+          <input type="time" [(ngModel)]="entrada_Quarta" name="entrada_Quarta" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="intervalo_Quarta"> Intervalo Quarta-feira
+          <input type="time" [(ngModel)]="intervalo_Quarta" name="intervalo_Quarta" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="saida_Quarta"> Saída Quarta-feira
+          <input type="time" [(ngModel)]="saida_Quarta" name="saida_Quarta" id="time">
+        </label>
+      </ion-item>
+
+      <!-- Quinta-feira -->
+      <ion-item class="input-title">
+        <label for="entrada_Quinta"> Entrada Quinta-feira
+          <input type="time" [(ngModel)]="entrada_Quinta" name="entrada_Quinta" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="intervalo_Quinta"> Intervalo Quinta-feira
+          <input type="time" [(ngModel)]="intervalo_Quinta" name="intervalo_Quinta" id="time">
+        </label>
+      </ion-item>
+
+      <ion-item class="input-title">
+        <label for="saida_Quinta"> Saída Quinta-feira
+          <input type="time" [(ngModel)]="saida_Quinta" name="saida_Quinta" id="time">
+        </label>
+      </ion-item>
+
+      <!-- Sexta-feira -->
+      <ion-item class="input-title">
+        <label for="entrada_Sexta"> Entrada Sexta-feira
+          <input type="time" [(ngModel)]="entrada_Sexta" name="entrada_Sexta" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="intervalo_Sexta"> Intervalo Sexta-feira
+          <input type="time" [(ngModel)]="intervalo_Sexta" name="intervalo_Sexta" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="saida_Sexta"> Saída Sexta-feira
+          <input type="time" [(ngModel)]="saida_Sexta" name="saida_Sexta" id="time">
+        </label>
+      </ion-item>
+
+      <!-- Sábado -->
+      <ion-item class="input-title">
+        <label for="entrada_Sabado"> Entrada Sábado
+          <input type="time" [(ngModel)]="entrada_Sabado" name="entrada_Sabado" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="intervalo_Sabado"> Intervalo Sábado
+          <input type="time" [(ngModel)]="intervalo_Sabado" name="intervalo_Sabado" id="time">
+        </label>
+      </ion-item>
+      <ion-item class="input-title">
+        <label for="saida_Sabado"> Saída Sábado
+          <input type="time" [(ngModel)]="saida_Sabado" name="saida_Sabado" id="time">
+        </label>
+      </ion-item>
+
+      <div class="logo">
+        <h1 class="h1-logo">Observação</h1>
+      </div>
+
+      <div class="input-link">
+        <textarea [(ngModel)]="observacao" name="observacao" placeholder="Exemplo: Na terça eu vou entrar 08:00 e sair de 11:00 e volto 15:00 até as 18:00."></textarea>
+      </div>
+
+      <div class="logo">
+        <h1 class="h1-logo">Equipe Turno</h1>
+      </div>
+
+      <div class="form-group">
+        <select [(ngModel)]="turno" name="turno" class="form-control">
+          <option value="Matutina">Matutina</option>
+          <option value="Vespertino" selected>Vespertino</option>
+          <option value="Noturno">Noturno</option>
+        </select>
+      </div>
+
+      <div class="logo">
+        <h1 class="h1-logo">Setor</h1>
+      </div>
+
+      <div class="form-group">
+        <select [(ngModel)]="setor" name="Setor" class="form-control">
+          <option value="UX-UI">UX-UI</option>
+          <option value="DevOps" selected>DevOps</option>
+          <option value="Redator">Redator</option>
+        </select>
+      </div>
+
+      <div class="logo">
+        <h1 class="h1-logo">Empresa</h1>
+      </div>
+
+      <div class="form-group">
+        <select [(ngModel)]="empresa" name="Empresa" class="form-control">
+          <option value="TT&T">TT&T</option>
+        </select>
+      </div>
+
+      <div class="criar-task">
+      <button class="button-criar-task" (click)="updateHorario()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="25" viewBox="0 0 16 15" fill="none">
+          <path d="M13.6961 13.2774V5.6592H1.92456V13.2774H13.6961ZM11.1736 0.811279H12.8552V2.1964H13.6961C14.6294 2.1964 15.3777 2.81971 15.3777 3.58152V13.2774C15.3777 14.0461 14.6294 14.6625 13.6961 14.6625H1.92456C0.991251 14.6625 0.24292 14.0392 0.24292 13.2774V3.58152C0.24292 2.81278 0.991251 2.1964 1.92456 2.1964H2.76539V0.811279H4.44703V2.1964H11.1736V0.811279ZM6.9695 6.69805H8.65114V8.77573H11.1736V10.1608H8.65114V12.2385H6.9695V10.1608H4.44703V8.77573H6.9695V6.69805Z" fill="white"/>
+        </svg>
+        <span>Atualizar</span>
+      </button>
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>

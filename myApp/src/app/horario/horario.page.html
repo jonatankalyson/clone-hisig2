@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div class="content-container">
+    <div class="calendar-div">
+      <div class="container">
+          <div class="logo">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="26" height="29" viewBox="0 0 26 29" fill="none">
+              <path d="M23.1111 26.1V10.15H2.88889V26.1H23.1111ZM18.7778 0H21.6667V2.9H23.1111C24.7144 2.9 26 4.205 26 5.8V26.1C26 27.7095 24.7144 29 23.1111 29H2.88889C1.28556 29 0 27.695 0 26.1V5.8C0 4.1905 1.28556 2.9 2.88889 2.9H4.33333V0H7.22222V2.9H18.7778V0ZM11.5556 12.325H14.4444V16.675H18.7778V19.575H14.4444V23.925H11.5556V19.575H7.22222V16.675H11.5556V12.325Z" fill="#393F4E"/>
+            </svg></span>
+            <h1>Minha Agenda</h1>
+          </div>
+
+          <ion-datetime class="calendar"></ion-datetime>
+
+            <ion-item>
+              <h2>Lista de Tarefas</h2>
+            </ion-item>
+
+          <h3 class="task-h3">Tarefas</h3>
+
+          <div class="register-task">
+            <p>Clique no botão para registrar uma tarefa.
+            </p>
+            <button [routerLink]="['/create-task']"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+              <path d="M9.21539 5.33333L9.99861 6.16889L2.433 14.2222H1.66644V13.4044L9.21539 5.33333ZM12.215 0C12.0067 0 11.79 0.0888889 11.6317 0.257778L10.1069 1.88444L13.2315 5.21778L14.7563 3.59111C15.0812 3.24444 15.0812 2.66667 14.7563 2.33778L12.8066 0.257778C12.6399 0.08 12.4316 0 12.215 0ZM9.21539 2.83556L0 12.6667V16H3.12457L12.34 6.16889L9.21539 2.83556Z" fill="white"/>
+              </svg></button>
+          </div>
+
+        </div>
+    </div>
+  </div>
+</ion-content>

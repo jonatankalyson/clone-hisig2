@@ -1,0 +1,181 @@
+<ion-content [fullscreen]="true">
+
+  <div class="content-container">
+
+    <div class="container">
+      <h1 class="task-title">Quadro de Horário</h1>
+
+      <ion-label position="stacked">Nome:</ion-label>
+      <ion-item class="input-title">
+        <ion-input [(ngModel)]="nomecompleto" placeholder="Nome e Sobrenome"></ion-input>
+      </ion-item>
+
+      <h6>Horário do Estágio</h6>
+
+  <!-- Segunda-feira -->
+  <div class="day-group">
+    <h6>Segunda-feira:</h6>
+    <ion-item class="input-title">
+      <span>Entrada</span>
+      <input type="time" [(ngModel)]="entrada_Segunda" step="900">
+    </ion-item>
+  
+    <ion-item class="input-title">
+      <span>Intervalo</span>
+      <input type="time" [(ngModel)]="intervalo_Segunda" step="900">
+    </ion-item>
+  
+    <ion-item class="input-title">
+      <span>Saída</span>
+      <input type="time" [(ngModel)]="saida_Segunda" step="900">
+    </ion-item>
+  </div>
+
+<!-- Terça-feira -->
+<div class="day-group">
+  <h6>Terça-feira:</h6>
+  <ion-item class="input-title">
+    <span>Entrada</span>
+    <input type="time" [(ngModel)]="entrada_Terca" step="900">
+  </ion-item>
+
+  <ion-item class="input-title">
+    <span>Intervalo</span>
+    <input type="time" [(ngModel)]="intervalo_Terca" step="900">
+  </ion-item>
+
+  <ion-item class="input-title">
+    <span>Saída</span>
+    <input type="time" [(ngModel)]="saida_Terca" step="900">
+  </ion-item>
+</div>
+
+<!-- Quarta-feira -->
+<div class="day-group">
+  <h6>Quarta-feira:</h6>
+  <ion-item class="input-title">
+    <span>Entrada</span>
+    <input type="time" [(ngModel)]="entrada_Quarta" step="900">
+  </ion-item>
+
+  <ion-item class="input-title">
+    <span>Intervalo</span>
+    <input type="time" [(ngModel)]="intervalo_Quarta" step="900">
+  </ion-item>
+
+  <ion-item class="input-title">
+    <span>Saída</span>
+    <input type="time" [(ngModel)]="saida_Quarta" step="900">
+  </ion-item>
+</div>
+
+<!-- Quinta-feira -->
+<div class="day-group">
+  <h6>Quinta-feira:</h6>
+  <ion-item class="input-title">
+    <span>Entrada</span>
+    <input type="time" [(ngModel)]="entrada_Quinta" step="900">
+  </ion-item>
+
+  <ion-item class="input-title">
+    <span>Intervalo</span>
+    <input type="time" [(ngModel)]="intervalo_Quinta" step="900">
+  </ion-item>
+
+  <ion-item class="input-title">
+    <span>Saída</span>
+    <input type="time" [(ngModel)]="saida_Quinta" step="900">
+  </ion-item>
+</div>
+
+<!-- Sexta-feira -->
+<div class="day-group">
+  <h6>Sexta-feira:</h6>
+  <ion-item class="input-title">
+    <span>Entrada</span>
+    <input type="time" [(ngModel)]="entrada_Sexta" step="900">
+  </ion-item>
+
+  <ion-item class="input-title">
+    <span>Intervalo</span>
+    <input type="time" [(ngModel)]="intervalo_Sexta" step="900">
+  </ion-item>
+
+  <ion-item class="input-title">
+    <span>Saída</span>
+    <input type="time" [(ngModel)]="saida_Sexta" step="900">
+  </ion-item>
+</div>
+
+<!-- Sábado -->
+<div class="day-group">
+  <h6>Sábado:</h6>
+  <ion-item class="input-title">
+    <span>Entrada</span>
+    <input type="time" [(ngModel)]="entrada_Sabado" step="900">
+  </ion-item>
+
+  <ion-item class="input-title">
+    <span>Intervalo</span>
+    <input type="time" [(ngModel)]="intervalo_Sabado" step="900">
+  </ion-item>
+
+  <ion-item class="input-title">
+    <span>Saída</span>
+    <input type="time" [(ngModel)]="saida_Sabado" step="900">
+  </ion-item>
+</div>
+
+      <div class="logo">
+        <h1 class="h1-logo">Observação</h1>
+      </div>
+
+      <div class="input-link">
+      <textarea [(ngModel)]="observacao" name="observacao" placeholder="Exemplo: Na terça vou trabalhar dàs 08h às 11h com intervalo de 4h e retorno dàs 15h às 18h."></textarea>
+      </div>
+
+      <div class="logo">
+        <h1 class="h1-logo">Equipe Turno</h1>
+      </div>
+
+      <div class="form-group">
+        <select [(ngModel)]="turno" name="turno" class="form-control">
+          <option value="Matutina">Matutina</option>
+          <option value="Vespertino" selected>Vespertino</option>
+          <option value="Noturno">Noturno</option>
+        </select>
+      </div>
+
+    <div class="logo">
+      <h1 class="h1-logo">Setor</h1>
+    </div>
+
+      <div class="form-group">
+        <select [(ngModel)]="setor" name="setor" class="form-control">
+          <option value="Ux UI">Ux UI</option>
+          <option value="Devops">Devops</option>
+          <option value="Redator">Redator</option>
+          <option value="Animador de Vídeo">Editor de Vídeos</option>
+        </select>
+      </div>
+
+    <div class="logo">
+      <h1 class="h1-logo">Empresa</h1>
+    </div>
+
+      <div class="form-group">
+        <select [(ngModel)]="empresa" name="empresa" class="form-control">
+          <option value="TT & T">TT & T</option>
+        </select>
+      </div>
+
+      <div class="criar-task">
+        <button class="button-criar-task" (click)="createHorario()">
+          <ion-img src="../../assets/icon/Vector (3).png"alt="criar-task"></ion-img>
+          <span>Salvar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

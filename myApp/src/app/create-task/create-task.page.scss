@@ -1,0 +1,188 @@
+.content-container {
+  padding-top: 56px;
+}
+
+
+.container {
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 0 1rem 0 1rem;
+}
+
+.task-title {
+  display: flex;
+  justify-content: center;
+}
+
+.input-title{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-title span{
+  color: #393F4E;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+ion-datetime-button {
+  margin-left: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.logo-2 {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.logo svg {
+  width: 22px;
+  height: 18px;
+  margin-top: 10px;
+}
+
+.logo-2 svg {
+  width: 23px;
+  height: 18px;
+  margin-top: 10px;
+}
+
+.logo h1, .logo-2 h1 {
+  align-items: center;
+  color: #393F4E;
+  font-family: Inconsolata;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135.523%;
+  text-align: center;
+}
+
+.input-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-link input {
+  width: 100%;
+  height: 35.687px;
+  padding: 22px 17px;
+
+  border-radius: 20px;
+  border: none;
+  background: #EBF1FE;
+}
+
+.input-link input::placeholder {
+  align-items: center;
+  color: #969696;
+  text-align:left;
+  font-family: Inconsolata;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.input-link button {
+  width: 35px;
+  height: 33px;
+  border-radius: 25px;
+  background: rgba(126, 119, 199, 0.68);
+}
+
+.input-link button:hover {
+  filter: brightness(1.2);
+  transition: .3s;
+}
+
+.criar-task {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.button-criar-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  width: 20rem;
+  height: 45px;
+  padding: 15px;
+  border-radius: 20px;
+  background: rgba(126, 119, 199, 0.68);
+}
+
+.button-criar-task :nth-child(2) {
+  color: #FFFAFA;
+  text-align: center;
+  font-family: Inconsolata;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background: none;
+}
+
+.time-input {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.time-input span {
+  width: 3rem;
+}
+
+.input-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.datetime-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.time-input input[type="time"] {
+  border-radius: 10px; 
+  padding: 5px;
+  --border: 1px solid rgb(168, 168, 168);
+}
+
+.label {
+  margin-bottom: 20px;
+  padding-right: 20px;
+  margin-left: 13px;
+}
+
+
+
+
+
+
+
+

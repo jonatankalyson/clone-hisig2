@@ -1,0 +1,16 @@
+ion-menu, ion-menu-button {
+  visibility: visible !important;
+  display: block !important;
+}
+
+
+ion-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+
+

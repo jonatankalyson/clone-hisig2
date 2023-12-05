@@ -1,0 +1,38 @@
+.content-container {
+  padding-top: 56px;
+}
+
+
+ion-grid {
+ max-width: 50rem;
+ display: flex;
+ flex-direction: column;
+ margin-top: 190px;
+
+}
+
+.already {
+  display: flex;
+  justify-content: center;
+}
+
+.one-line {
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  display: flex;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.logoimg{
+ margin: auto;
+}
+
+.auth-form over{
+  background: linear-gradient(black);
+}
+
+

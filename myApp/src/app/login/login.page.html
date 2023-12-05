@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="content-container">
+    <div class="container">
+      <form [formGroup]="loginForm" (ngSubmit)="submit()">
+        <h2>Login</h2>
+        <ion-item lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" formControlName="email" required></ion-input>
+        </ion-item>
+        <ion-item *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" lines="none">
+          <ion-text color="danger">
+            <p class="validação" *ngIf="loginForm.get('email')?.hasError('required')">Campo obrigatório.</p>
+          </ion-text>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password" required></ion-input>
+        </ion-item>
+        <ion-item *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" lines="none">
+          <ion-text color="danger">
+            <p class="validação" *ngIf="loginForm.get('password')?.hasError('required')">Campo obrigatório.</p>
+          </ion-text>
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <div class="butao_container">
+              <ion-button type="submit" shape="round" color="tertiary" class="butao" expand="block">Entrar</ion-button>
+            </div>
+            <a [routerLink]="['/forgot-password']" class="small-text">Esqueceu a senha?</a>
+            <a [routerLink]="['/registration']" class="small-text">Cadastra-se</a>
+          </ion-col>
+        </ion-row>
+        <p>Ou continue com</p>
+        <div class="icon_container">
+          <div class="icon"><img src="../../assets/icon/facebook icon 1.png" alt="icone do facebook"></div>
+          <div class="icon"><img src="../../assets/icon/google icon 1.png" alt=""></div>
+          <div class="icon"><img src="../../assets/icon/linkedin icon 1.png" alt=""></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,9 @@
+<ion-buttons class="containerButton">
+  <ion-back-button  defaultHref="/" *ngIf="showBackButton">Voltar</ion-back-button>
+  <ion-item slot="start"  *ngIf="showProfileHome" [routerLink]="['/perfil']"> 
+      <ion-avatar>
+        <img class="imgProfile" src="../../assets/Ellipse 1.png" alt="Foto de perfil do usuário"/>
+      </ion-avatar>
+    </ion-item>
+  <ion-menu-button class="menu-button-r" menu="first"></ion-menu-button>
+</ion-buttons>

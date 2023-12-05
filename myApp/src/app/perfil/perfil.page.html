@@ -1,0 +1,49 @@
+<ion-content class="ion-content" >
+  <div class="main">
+    <div class="content">
+      <ion-row>
+        <ion-col>
+          <img  class="papelParede" src="../../assets/icon/circulo-papelParede-Perfil.svg"/> 
+
+          <div class="inf-profile">
+            <img class="imgProfile" src="../../assets/Ellipse 1.png" alt="Foto de perfil do usuário"/>
+              
+            <h3>Klanda, <span class="age">24</span></h3>
+            <h4 class="about">Desenvolvedora Web </h4>
+            
+            <div>
+              <img src="../../assets/icon/camera.svg"/>
+              <ion-input class="input" type="file"/>
+            </div>  
+          </div>
+        </ion-col>
+      </ion-row>
+      
+      <div class="options">
+        <div class="config">
+          <img src="../../assets/icon/configuraçoes.svg"/>
+          <ion-label [routerLink]="['/settings']">
+            <a href="#">Configurações</a>
+          </ion-label>
+        </div>
+
+        <div class="config">
+          <img src="../../assets/icon/editar.svg"/>
+          <ion-label [routerLink]="['/info']">
+            <a href="#">Editar info</a> 
+          </ion-label>
+        </div>
+      </div>
+    </div>
+  
+    <ion-row>
+      <ion-col>
+        <ion-label [routerLink]="['/trilhas']">
+          <ion-button type="submit" shape="round" color="purple" class="button">Trilhas</ion-button>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+

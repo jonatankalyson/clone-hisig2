@@ -1,0 +1,58 @@
+.content-container {
+  padding-top: 56px; /* ou o valor exato da altura do seu header */
+}
+
+.title-h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  color: #000;
+  font-family: Inconsolata;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+ion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+ion-label {
+  cursor: pointer;
+}
+
+ion-label p {
+  white-space: normal;
+}
+
+.img-container{
+  width: 50px;
+}
+
+img {
+  width: 46px;
+  height: 46px;
+
+}
+
+ion-menu {
+  z-index: 9999 !important;
+}
+
+ion-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: background-color 0.5s, box-shadow 0.5s;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.384);
+}
+
+ion-item:hover .img-container img {
+  filter: brightness(0.5);
+  transition: filter 0.3s;
+}
+.ok{
+  padding: 10px;
+}

@@ -1,0 +1,50 @@
+<ion-content [fullscreen]="true">
+  <div class="ok">
+    <h1 class="title-h1">Trilha Inicial</h1>
+    
+    <ion-button (click)="adicionarTrilha()">Adicionar Nova Trilha</ion-button>
+
+    <ion-list class="trilhas-list">
+      <ion-item *ngFor="let trilha of trilhas" [routerLink]="trilha.route" style="cursor: pointer;">
+        <ion-avatar slot="start" class="img-container">
+          <img [src]="trilha.iconSrc" alt="Ícone da trilha">
+        </ion-avatar>
+
+        <ion-checkbox></ion-checkbox>
+        <ion-label>
+          <span>{{ trilha.title }}</span>
+          <p>{{ trilha.description }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+
+  <ion-card *ngIf="exibirFormulario">
+    <ion-card-header>
+      Criar Nova Trilha
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Título</ion-label>
+        <ion-input [(ngModel)]="novaTrilha.title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Informações</ion-label>
+        <ion-input [(ngModel)]="novaTrilha.description"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">URL da Imagem</ion-label>
+        <ion-input [(ngModel)]="novaTrilha.iconSrc"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" (click)="salvarNovaTrilha()">Salvar Trilha</ion-button>
+      <ion-button expand="full" color="danger" (click)="cancelarAdicaoTrilha()">Cancelar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

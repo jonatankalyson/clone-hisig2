@@ -1,0 +1,39 @@
+
+<ion-content fullscreen="true" class="ion-padding">
+  <div class="content-container">
+
+    <div class="container">
+      <ion-text>
+        <h1>Lista de Testes</h1>
+      </ion-text>
+
+      <ion-text>
+        <h1>Adicionar / Atualizar Teste</h1>
+      </ion-text>
+
+      <ion-item>
+        <ion-label>Nome: </ion-label>
+        <ion-input [(ngModel)]="teste.nometeste" placeholder="Nome do Teste"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Descrição: </ion-label>
+        <ion-input [(ngModel)]="teste.resumo" placeholder="Descrição do Teste"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>PDF: </ion-label>
+        <input type="file" accept=".pdf" (change)="handleFileInput($event)">
+      </ion-item>
+
+      <div class="criar-task">
+        <button class="button-criar-task" (click)="createTeste()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="25" viewBox="0 0 16 15" fill="none">
+            <path d="M13.6961 13.2774V5.6592H1.92456V13.2774H13.6961ZM11.1736 0.811279H12.8552V2.1964H13.6961C14.6294 2.1964 15.3777 2.81971 15.3777 3.58152V13.2774C15.3777 14.0461 14.6294 14.6625 13.6961 14.6625H1.92456C0.991251 14.6625 0.24292 14.0392 0.24292 13.2774V3.58152C0.24292 2.81278 0.991251 2.1964 1.92456 2.1964H2.76539V0.811279H4.44703V2.1964H11.1736V0.811279ZM6.9695 6.69805H8.65114V8.77573H11.1736V10.1608H8.65114V12.2385H6.9695V10.1608H4.44703V8.77573H6.9695V6.69805Z" fill="white"/>
+          </svg>
+          <span>Salvar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>
